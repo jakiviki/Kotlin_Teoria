@@ -5,6 +5,7 @@ import kotlin.properties.Delegates
 class Persona (nombre:String,apellido:String?){
     var nombre:String?= nombre
     var apellido: String? = apellido
+    var ssh = 0
 
 
 
