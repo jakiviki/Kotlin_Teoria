@@ -49,7 +49,7 @@ herencia a tres niveles estos heredan de los hijos no del padre vehiculo
 
 //
 
-// no hace falta crear un objeto para acceder a sus atributos
+// clase Objeto no hace falta crear un objeto para acceder a sus atributos
 // y tampoco el apodo de class en la declaracion
 object Perro {
     var raza: String = "caniche"

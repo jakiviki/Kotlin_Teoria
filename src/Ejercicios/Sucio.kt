@@ -1,30 +1,11 @@
 package Ejercicios
 
 fun main() {
-// OBJETO DELFIN
-    var delfin = Delfin("mamifero", "delfin", "todo el oceano", "comun")
+    var array = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
+    for ((a, b) in array.withIndex()) println("el indice es: $a y el value: $b")
 
-}
-
-abstract class SerVivoAb(tipo: String, especie: String) {
-    var tipo = tipo
-    var especie = especie
-
-    abstract fun respirar()
-
-
-}
-
-class Delfin(
-    tipo: String,
-    especie: String,
-    situacionGeografica: String,
-    nombre: String
-) : SerVivoAb(tipo, especie) {
-    override fun respirar() {
-        TODO("Not yet implemented")
-    }
-
+    // AQUI USO UNA SOLA VARIABLE PARA GUARDAR TODO EL INDEX Y EL VALUE
+    for (a in array.withIndex()) println(a)
 
 }

@@ -5,9 +5,12 @@ fun main() {
     // podemos crear un objeto y añadir valor a los atributos sin los set a difeerencia de java
     // ejem...
     var objetoUsuario = Usuario("javi","blanco","9089")
+    var ojUsuario2 = Usuario("javi","negro","00")
 
 
     println(objetoUsuario.pass)
+    println(ojUsuario2.pass)
+    println(ojUsuario2.toString())
 
 }
 

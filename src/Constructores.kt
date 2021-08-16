@@ -38,3 +38,11 @@ class per(name:String){
         this.apellido = apellido
     }
 }
+
+fun main() {
+    var perro = per("javi")
+    var perro2 = per("oscar","gonzalez")
+
+    println(perro.apellido)
+    println(perro2.apellido)
+}

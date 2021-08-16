@@ -11,6 +11,11 @@ fun main(args: Array<String>) {
     for (numero: Int in 10 until 15 ) println(numero)
     // para imprimir en decremento es obligatorio el down
     for (numero: Int in 20 downTo 1 ) println(numero)
-
     for ((indice,valor) in array1.withIndex()) println( " En la posicion $indice: $valor")
+
+    // PUEDO GUARDAR EL INDEX Y EL VALUE EN UNA SOLA VARIABLE
+    for (a in array1.withIndex()) println(a)
+
+
+
 }
