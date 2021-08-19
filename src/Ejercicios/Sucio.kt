@@ -1,11 +1,42 @@
 package Ejercicios
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer
+import javax.swing.JOptionPane
+
 fun main() {
-    var array = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-
-    for ((a, b) in array.withIndex()) println("el indice es: $a y el value: $b")
-
-    // AQUI USO UNA SOLA VARIABLE PARA GUARDAR TODO EL INDEX Y EL VALUE
-    for (a in array.withIndex()) println(a)
+    arraysList()
 
 }
+
+fun arraysList(){
+    var elementos: Int = JOptionPane.showInputDialog("INTRODUCE UN TAMAÑO JAVI").toInt()
+    var listaEstatica: Array<Int?> = arrayOfNulls<Int>(elementos)
+
+    for (i in 0 until elementos){
+        listaEstatica[i] = JOptionPane.showInputDialog("Introduce un valor").toInt()
+    }
+
+    println("ESTA ES TU LISTA JAVI")
+    listaEstatica.forEach {
+        println(it)
+    }
+
+    var arrayLlistDinamica = ArrayList<Int>()
+    var respuesta:Char
+    do {
+        arrayLlistDinamica.add(JOptionPane.showInputDialog("Añade valores a la lista dinamica").toInt())
+        respuesta = JOptionPane.showInputDialog("Quieres continuar: S/N")[0]
+
+    }while (respuesta == 's' || respuesta == 'S')
+
+    println("ESTA ES TU LISTA JAVI")
+    arrayLlistDinamica.forEach {
+        println(it)
+    }
+
+
+
+}
+
+
+
