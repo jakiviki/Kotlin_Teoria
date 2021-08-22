@@ -2,7 +2,7 @@ package Ejercicios
 
 import kotlin.math.min
 
-// convertir horas a minutos
+// convertir horas Teoria_kotlin.a minutos
 // 1 hora = 60 minutos
 // 1 hora = 3600 segundos
 

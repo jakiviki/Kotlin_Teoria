@@ -1,8 +1,5 @@
 package Ejercicios
 
-import PaqueteExterior.paqueteExterior
-import numero
-
 // allar el area de un triangulo
 // se hace multiplicando la base por la altura
 

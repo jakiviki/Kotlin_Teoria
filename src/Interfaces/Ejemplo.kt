@@ -15,11 +15,11 @@ class Ejemplo : InterfaceA, InterfaceB {
 
 
     override fun suma() {
-        println("sumo desde la b")
+        println("sumo desde la Teoria_kotlin.b")
     }
 
     override fun resta() {
-        println("resto desde la b")
+        println("resto desde la Teoria_kotlin.b")
     }
 
 

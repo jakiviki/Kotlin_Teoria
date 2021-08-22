@@ -24,7 +24,7 @@ fun arraysList(){
     var arrayLlistDinamica = ArrayList<Int>()
     var respuesta:Char
     do {
-        arrayLlistDinamica.add(JOptionPane.showInputDialog("Añade valores a la lista dinamica").toInt())
+        arrayLlistDinamica.add(JOptionPane.showInputDialog("Añade valores Teoria_kotlin.a la lista dinamica").toInt())
         respuesta = JOptionPane.showInputDialog("Quieres continuar: S/N")[0]
 
     }while (respuesta == 's' || respuesta == 'S')
