@@ -3,49 +3,49 @@ package Teoria_kotlin
 fun main() {
 
 
-    fun ordenMayor(palabra: String, block: (String) -> Int) : Int{
+    fun ordenMayor(palabra: String, block: (String) -> Int): Int {
         return block(palabra)
     }
-    println(ordenMayor("Teoria_kotlin.getJavi") { it -> it.length })
+    println("longitud de mi nombre es: ${ordenMayor("javierFernandezGarcia") { it -> it.length }}")
 
 
     // en la puerta declaro e implanto la lambda
-    fun sumaLambda(numero: Int,block: (Int) -> Int = {it -> it+10}){
-        println( block(numero))
+    fun sumaLambda(numero: Int, block: (Int) -> Int = { it -> it + 10 }) {
+        println(block(numero))
     }
     sumaLambda(20)
 
 
     // solo declaro la lambda en el parametro  luego la implanto
-    fun sumaLambda2(numero2: Int, block: (Int) -> Int){
+    fun sumaLambda2(numero2: Int, block: (Int) -> Int) {
         println(block(numero2))
     }
     sumaLambda2(44) { it -> it + it }
 
-
-    fun imprimelo(palabra: String, block: (String) -> Unit){
+    // cuidado con el Unit aqui no imprime nada por ser un Unit por eso no pinta nada
+    imprimir("cuidado con Unit aqui no devuelve nada y por lo tanto no imprime ningun valor")
+    fun imprimelo(palabra: String, block: (String) -> Unit) {
         println(block(palabra))
     }
-    imprimelo("Teoria_kotlin.getJavi"){it -> println(it)}
+    imprimelo("Teoria_kotlin.getJavi") { it -> it.length }
 
 
+    imprimir("lambdas que devuelve lambda pero necesita un String")
     // funciones que devuelven lambdas
-    fun lambdas(nombre: String): () -> String{
+    fun lambdasDevuelveLambda(nombre: String): () -> String {
         return { "hola amigo tu nombre es: $nombre" }  // tiene que llevar un string
     }
-    println(lambdas("el puto amo"))
+    println(lambdasDevuelveLambda("el puto amo"))
+    var miString = lambdasDevuelveLambda("Pablo")
+    println(miString)
 
-
-
-    val valorLambdas: () -> String = lambdas("vamos Teoria_kotlin.getJavi")
-    println("ahora siii")
+    imprimir("lambda que contiene el String")
+    val valorLambdas: () -> String = lambdasDevuelveLambda("javier fernandez")
     println(valorLambdas())
 
 }
 
 
-
-
-fun imprimir(name: String){
+fun imprimir(name: String) {
     println("************************  $name ******************************")
 }

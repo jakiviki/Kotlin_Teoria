@@ -1,4 +1,5 @@
-package Teoria_kotlin// lo primero que se puede notar Teoria_kotlin.a diferencia de una clase es que no hace falta las funciones
+package Teoria_kotlin
+// lo primero que se puede notar a diferencia de una clase es que no hace falta las funciones
 // y que los atributos se declaran en el constructor
 
 fun main() {
@@ -6,6 +7,12 @@ fun main() {
     var objetoHumano: Humano = Humano("Blanco","javier","hombre")
     var objetoHumano2: Humano = Humano(nombre = "javier",sexo = "macho",raza = "negro")
     var objetoHumano3 = Humano("blanco",sexo = "mujer",nombre = "susana")
+
+    // una vez crado el objeto la val no se puede cambiar
+    // en este caso raza es val y nombre es var
+
+    objetoHumano.nombre = "paco"
+    // objetoHumano.raza = "perro"   .error no compilaria
 
     println(objetoHumano)
     println(objetoHumano2)

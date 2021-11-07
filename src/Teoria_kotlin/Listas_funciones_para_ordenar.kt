@@ -1,7 +1,7 @@
 package Teoria_kotlin
 
 fun main() {
-    var lista = listOf<Int>(10,20,50,30,90,80)
+    var lista = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     println(lista + "simple sin tocar")
 
     // este metodo ordena de menor Teoria_kotlin.a mayor
@@ -18,7 +18,7 @@ fun main() {
 
     // ordena de forma aleatoria la lista
     val aleatoria = lista.shuffled()
-    println(aleatoria+ "aleatoria con shuffled")
+    println(aleatoria + "aleatoria con shuffled")
 
     // ordena al contrario
     val reversa = lista.reversed()
@@ -29,12 +29,14 @@ fun main() {
     // se puede hacer cosas antes tambien.. ejem..
     val mensajes = lista.map { numero ->
         // priemro imprimo
-        println("primero imprimo ${numero+1}")
-        " El Teoria_kotlin.getNumero es: $numero" }
+        println("primero imprimo $numero")
+        " cambio unidades por decenas: ${numero + 10}"
 
-    println(mensajes)
+    }
+
+    println("imprimo la val mensages: $mensajes")
 
     // tambien podemos usar un filtrado de la lista
     val filtrados = lista.filter { numero -> numero > 80 }
-    println(filtrados)
+    println(filtrados.joinToString())
 }

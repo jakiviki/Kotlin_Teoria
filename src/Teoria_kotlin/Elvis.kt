@@ -10,7 +10,6 @@ fun main() {
     // guardo un valor nulo aposta
     var edadJavi = javi.edad
     println(edadJavi)
-
     var edadIrene = irene.edad ?: 15
     println(edadIrene)
 

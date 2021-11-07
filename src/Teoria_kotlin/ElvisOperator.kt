@@ -1,6 +1,6 @@
 package Teoria_kotlin
 
-// con ? podemos dejar camino Teoria_kotlin.a una variable para que pueda ser tambien nulla
+// con ? podemos dejar camino Teoria_kotlin.a una variable para que pueda ser tambien null
 var javi: String? = "Teoria_kotlin.getJavi"
 var desconocido: String? = null
 
