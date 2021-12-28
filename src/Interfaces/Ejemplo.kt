@@ -13,10 +13,10 @@ class Ejemplo : InterfaceA, InterfaceB {
         println("hablanco desde la A")
     }
 
-
     override fun suma() {
-        println("sumo desde la Teoria_kotlin.b")
+        TODO("Not yet implemented")
     }
+
 
     override fun resta() {
         println("resto desde la Teoria_kotlin.b")

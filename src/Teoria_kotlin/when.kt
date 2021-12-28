@@ -12,14 +12,22 @@ fun main(args: Array<String>) {
         in 3..5 -> println("contraseña poco segura")
         else -> println("Introduce mayusculas y numeros")
     }
+    println()
 
 
-    // Uso 2 añadimos Teoria_kotlin.a una funcion
+    // IGUALANDO UNA FUNCION LA WHEN
+    println("igualndo el when a la funcion:")
     ejemplo("jsjsj")
-    ejemplo2("Teoria_kotlin.getJavi")
+    println()
 
-    // llamada Teoria_kotlin.a Teoria_kotlin.dameAlgo
-    dameAlgo("Teoria_kotlin.getJavi el campeon")
+    // igualando un if a la funcion
+    println("Igualando un if a la funcion:")
+    ejemplo2("9d9d99s9s9s9")
+    println()
+
+    //DEVOLVIENDO UN OBJETO EN LA FUNCION
+    println("devolviendo un objeto en la funcion")
+    dameAlgo("esto es una frase")
 
 
 

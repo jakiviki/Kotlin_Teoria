@@ -5,7 +5,7 @@ package Teoria_kotlin
 
 fun main() {
     println("imprimo una listOf")
-    val nombres = listOf("Teoria_kotlin.getJavi", "Noe", "irene")
+    val nombres = listOf("Algun dia lo consegire", "Noe", "irene")
 
     with(nombres) {
         println(this)
@@ -20,8 +20,8 @@ fun main() {
         println(length)
     }
 
-    val personaWith1 = personaRun("javi", "del olmo", 19)
-    val personaWith2 = personaRun("javi", "del olmo", 45)
+    val personaWith1 = PersonaWith("javi", "del olmo", 19)
+    val personaWith2 = PersonaWith("javi", "del olmo", 45)
 
     println("Usando el with con un objeto")
     with(personaWith1) {

@@ -22,9 +22,14 @@ fun main() {
     personaLet1.let {
         it.edad -=3
     }
+
+    // COMPRUEBO UNA FUNCIN IGUALADA A UN PARAMETRO
+    println("IMPRIMIENDO UNA FUNCION IGUALADA EN UNA DATA CLASS")
+    println(PersonaLet(apellido = "fernandez").apellido)
 }
 
 
-data class PersonaLet(val nombre:String, val apellido:String, var edad:Int=0){
+data class PersonaLet(val nombre:String= "", val apellido:String= "", var edad:Int=0){
     fun dameNombre()= println("nombre: $nombre apellido: $apellido")
+    fun dameApellido()= apellido
 }

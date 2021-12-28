@@ -1,4 +1,5 @@
 package Teoria_kotlin
+
 // se usa la palabra constructor
 // se puede omitir
 // las variables no se puede inicializar para eso se usa el init
@@ -40,8 +41,8 @@ class per(name:String){
 }
 
 fun main() {
-    var perro = per("Teoria_kotlin.getJavi")
-    var perro2 = per("oscar","gonzalez")
+    val perro = per("Teoria_kotlin.getJavi")
+    val perro2 = per("oscar","gonzalez")
 
     println(perro.apellido)
     println(perro2.apellido)

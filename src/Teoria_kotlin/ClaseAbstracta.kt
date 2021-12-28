@@ -49,7 +49,7 @@ herencia Teoria_kotlin.a tres niveles estos heredan de los hijos no del padre Te
 
 //
 
-// clase Objeto no hace falta crear un objeto para acceder Teoria_kotlin.a sus atributos
+// clase Objeto no hace falta crear un objeto para acceder a sus atributos
 // y tampoco el apodo de class en la declaracion
 object Perro {
     var raza: String = "caniche"

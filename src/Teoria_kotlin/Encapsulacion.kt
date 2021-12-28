@@ -4,7 +4,7 @@ package Teoria_kotlin
 // para eso lo hacemos debajo de cada atributo
 fun main() {
 
-    // podemos crear un objeto y añadir valor Teoria_kotlin.a los atributos sin los set Teoria_kotlin.a difeerencia de java
+    // podemos crear un objeto y añadir valor a los atributos sin los set a difeerencia de java
     // ejem...
     var objetoUsuario = Usuario("Teoria_kotlin.getJavi","blanco","9089")
     var ojUsuario2 = Usuario("Teoria_kotlin.getJavi","negro","00")

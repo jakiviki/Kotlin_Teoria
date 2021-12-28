@@ -1,7 +1,7 @@
 package Teoria_kotlin
 
 fun main(args: Array<String>) {
-    // vamos Teoria_kotlin.a crear dos for y salimos de los dos
+    // THE GOOD CODE
     // CON EL BREAK SALTAMOS DEL EN EL MISMO FOR AL SIGUIENTE NUMERO EN ESTE CASO EL 6
     for (a in 1..10) {
         for (b in 1..6) {
@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
                 break
             }
 
-            if (b == 6){
+            if (b == 6) {
                 println("++++++++++ salgo del for interno")
             }
         }
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
                 println("estamos en el ecuador y voy Teoria_kotlin.a salir de los dos For")
                 break@exit
             }
-            if (b == 6){
+            if (b == 6) {
                 println("++++++++++++ fin del segundo for")
             }
         }
@@ -35,21 +35,23 @@ fun main(args: Array<String>) {
 
     miImpresion(" Con un break y un exit en el SEGUNDO  for")
 
+    miImpresion("con 3 For: ............")
+
 
     for (a in 1..10) {
         exit@ for (b in 1..10) {
             for (c in 1..6) {
-                println(" Teoria_kotlin.a:$a Teoria_kotlin.b:$b c:$c")
+                println("a:$a b:$b c:$c")
                 if (a == 5 && b == 5 && c == 3) {
                     println("estamos en el ecuador y salgo del 5 en los dos dejando el primero correr")
                     break@exit
                 }
-                if (c == 6){
+                if (c == 6) {
                     println("++++++++++++ fin del tercer for")
                 }
             }
 
-            if (b == 10){
+            if (b == 10) {
                 println("++++++++++++ fin del segundo for")
             }
         }

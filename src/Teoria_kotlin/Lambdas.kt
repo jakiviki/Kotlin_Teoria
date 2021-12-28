@@ -5,7 +5,7 @@ fun main() {
     var lambda: (String)-> Int = { it -> it.length} // puedes usar el it o darle un nombre Teoria_kotlin.a it
     miPrintln()
 
-    // para imvocar Teoria_kotlin.a la lambda tienes que poner los ()
+    // para imvocar a la lambda tienes que poner los ()
     // SI NO DEVUELVE NADA NO SIRVE DE NADA UN PRINTLN
     println("Sin parentesis"+lambda)
     println("Con parentesis longitud de: "+lambda("Teoria_kotlin.getJavi"))

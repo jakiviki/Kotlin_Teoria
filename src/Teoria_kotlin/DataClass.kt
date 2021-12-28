@@ -4,9 +4,9 @@ package Teoria_kotlin
 
 fun main() {
     // varias formas de llamar al objeto dataclass
-    var objetoHumano: Humano = Humano("Blanco","javier","hombre")
-    var objetoHumano2: Humano = Humano(nombre = "javier",sexo = "macho",raza = "negro")
-    var objetoHumano3 = Humano("blanco",sexo = "mujer",nombre = "susana")
+    val objetoHumano: Humano = Humano("Blanco","javier","hombre")
+    val objetoHumano2: Humano = Humano(nombre = "javier",sexo = "macho",raza = "negro")
+    val objetoHumano3 = Humano("blanco",sexo = "mujer",nombre = "susana")
 
     // una vez crado el objeto la val no se puede cambiar
     // en este caso raza es val y nombre es var
