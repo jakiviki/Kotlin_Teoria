@@ -42,7 +42,7 @@ open class Coche(tipo: String, encendido: Boolean, modelo: String) : vehiculo(en
     var modelo: String= modelo
 
     override fun arrancar() {
-        super.arrancar()  // esto llama Teoria_kotlin.a la frase del padre
+        super.arrancar()  // esto llama la frase del padre
         println("el coche $tipo modelo: $modelo esta arrancado en coche")
     }
 

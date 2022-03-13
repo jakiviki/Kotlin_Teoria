@@ -9,10 +9,7 @@ NORMA DE LAS CLASES ABSTRACTAS
  */
 
 
-abstract class Vehiculo(
-    var tipo: String = ""
-
-) {
+abstract class Vehiculo(var tipo: String = "") {
     abstract fun arrancar()  // esto se define en los hijos y nietos porque cada uno arranca de una manera por ejm
     abstract fun acelerar() // porque cada uno acelera de una manera cada hijo dice como acelera
 

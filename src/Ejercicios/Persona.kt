@@ -2,10 +2,16 @@ package Ejercicios
 
 import kotlin.properties.Delegates
 
-class Persona (nombre:String,apellido:String?){
+
+class Persona (nombre:String = "",apellido:String? = null){
     var nombre:String?= nombre
     var apellido: String? = apellido
     var ssh = 0
+
+    init {
+        this.nombre = ""
+        this.apellido = ""
+    }
 
 
 

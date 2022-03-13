@@ -4,17 +4,18 @@ fun main(args: Array<String>) {
     // THE GOOD CODE
     // CON EL BREAK SALTAMOS DEL EN EL MISMO FOR AL SIGUIENTE NUMERO EN ESTE CASO EL 6
     for (a in 1..10) {
-        for (b in 1..6) {
+        for (b in 1..10) {
             println("$a: $b")
-            if (a == 5 && b == 3) {
-                println("estamos en el ecuador y voy Teoria_kotlin.a saltar al 6 ")
+            if (a == 5 && b == 5) {
+                println("ECUADOR DE LOS DOS FOR")
                 break
             }
 
-            if (b == 6) {
-                println("++++++++++ salgo del for interno")
+            if (b == 5) {
+                println("++++++++++ ecuador  del for interno")
             }
         }
+        println("+++++ Salto a siguiente numero $a")
     }
 
     miImpresion(" Con un break y un exit en el primer for")

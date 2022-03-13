@@ -46,6 +46,6 @@ fun dentroVariable(){
         a
     }else {
         println("Teoria_kotlin.a es falso")
-        b
+
     }
 }

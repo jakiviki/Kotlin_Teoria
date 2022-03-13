@@ -34,6 +34,12 @@ fun main() {
     println(lambda4(20))
     miPrintln()
 
+    //DECLARACION DE UNA LAMBDA NULL
+    val lambdaNull: (()->Unit)? = null
+    val lambdaNull2: (()->Unit)? = {}
+
+   lambdaNull2 ?: { println("no nulla")}
+
 
 
 

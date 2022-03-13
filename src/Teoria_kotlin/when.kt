@@ -28,6 +28,14 @@ fun main(args: Array<String>) {
     //DEVOLVIENDO UN OBJETO EN LA FUNCION
     println("devolviendo un objeto en la funcion")
     dameAlgo("esto es una frase")
+    println()
+
+
+    //IMPRIMO LA LOGICA SIN PARENTESIS
+    println("IMPRIMO LA LOGICA SIN () EN EL WHEN")
+    print(acceso)
+
+
 
 
 
@@ -61,4 +69,15 @@ fun ejemplo2(password: String) = if (password.length < 10){
 }else {
     println("Contraseña correcta")
 }
+
+// USANDO VARIAS LOGICAS SIN EL ()
+val usuarioisLoged= true
+val mayorEdad = true
+
+val acceso = when{
+    usuarioisLoged and  mayorEdad -> "hola javi tienes acceso"
+    !usuarioisLoged || !mayorEdad -> "no tinees acceso javi"
+    else -> "null"
+}
+
 
