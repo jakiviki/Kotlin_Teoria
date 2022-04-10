@@ -9,6 +9,7 @@ fun main() {
     var objetoUsuario = Usuario("Teoria_kotlin.getJavi", "blanco", "9089")
     var ojUsuario2 = Usuario("Teoria_kotlin.getJavi", "negro", "00")
 
+
     println("sin modifificar")
     println(objetoUsuario.pass)
     objetoUsuario.pass = "passchange"

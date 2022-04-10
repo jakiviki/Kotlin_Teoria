@@ -23,10 +23,11 @@ fun main() {
     val personaWith1 = PersonaWith("javi", "del olmo", 19)
     val personaWith2 = PersonaWith("javi", "del olmo", 45)
 
-    println("Usando el with con un objeto")
+    println("Usando el with con un objeto e imprimo el toString")
     with(personaWith1) {
         println(this.nombre) // usando el this
         println(nombre)  // sin usar el this
+        this.toString()
         nombre    // al ser el ultimo es una devolucion y podemos usar los metodos con un .
     }
 
@@ -49,4 +50,8 @@ fun main() {
 
 data class PersonaWith(var nombre: String, val apellido: String, var edad: Int = 0) {
     fun dameNombre() = println("nombre: $nombre apellido: $apellido")
+
+    override fun toString(): String {
+        return  "nombre: $nombre, apellido: $apellido edad: $edad"
+    }
 }

@@ -34,7 +34,7 @@ fun main() {
     javi?.let {
         println("no entra por ser null ")
         println(it)
-    }
+    }.run { println("ahora  entra en el run") }
 
     // IMPRIME CUANDO NO ES NULO
 

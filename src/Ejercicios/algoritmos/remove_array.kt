@@ -49,20 +49,5 @@ fun main() {
     println(newArray.toList())
 
 
-    val name = intArrayOf(1,1,2,2,3,3,4,4)
-    var newIndex = 1
-
-    for (i in 1 until name.size){
-        val iz = i-1
-         if (name[iz] != name[i]){
-             name[newIndex] = name[i]
-             newIndex++
-         }
-         println(name[newIndex])
-
-    }
-
-    println(name.toList())
-
 
 }
