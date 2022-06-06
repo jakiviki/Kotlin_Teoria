@@ -1,28 +1,27 @@
 package Ejercicios
 
-import Teoria_kotlin.SingletonObjetPersona.apellido
-import Teoria_kotlin.name
-
 fun main() {
 
-val obj2 = PersonaHumana("javi","fernandez",45)
-
-    println("apellido: "+obj2.apellido)
+    superior(contar(12))
+    superior(contar2)
 
 }
 
+fun superior(validate:(String)-> Unit){
+    var myName = "javier"
+    validate(myName)
+}
 
-class PersonaHumana ( var name: String ,val apellido: String){
-
-    var edadp = 0
-
-
-    constructor(name: String,apellido: String,edad:Int):this(apellido = apellido,name = name){
-        this.edadp = edad
+fun contar(int: Int): (String)->Unit {
+    return {
+        println(int+it.length)
     }
-
-
-
-
 }
+
+val contar2: (String)->Unit = {
+    println(it.indices)
+}
+
+
+
 

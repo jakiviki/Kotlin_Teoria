@@ -23,7 +23,6 @@ class Ejem2(name: String){
     var apellido= ""
 
     constructor(name: String,apellido:String): this(name){
-        this.name = name
         this.apellido = apellido
     }
 }
@@ -31,11 +30,10 @@ class Ejem2(name: String){
 
 class per(name:String){
 
-    var name = ""
+    var name = name
     var apellido= ""
 
     constructor(name: String,apellido:String): this(name){
-        this.name = name
         this.apellido = apellido
     }
 }
