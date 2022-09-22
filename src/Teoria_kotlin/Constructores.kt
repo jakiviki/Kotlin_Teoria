@@ -28,9 +28,8 @@ class Ejem2(name: String){
 }
 
 
-class per(name:String){
+class Per(var name:String){
 
-    var name = name
     var apellido= ""
 
     constructor(name: String,apellido:String): this(name){
@@ -39,8 +38,9 @@ class per(name:String){
 }
 
 fun main() {
-    val perro = per("Teoria_kotlin.getJavi")
-    val perro2 = per("oscar","gonzalez")
+    val perro = Per("Teoria_kotlin.getJavi")
+    val perro2 = Per("oscar","gonzalez")
+    val perrete = Per("Javiercillo")
 
     println(perro.apellido)
     println(perro2.apellido)

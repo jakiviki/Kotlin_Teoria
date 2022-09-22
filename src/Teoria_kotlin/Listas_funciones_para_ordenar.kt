@@ -39,4 +39,25 @@ fun main() {
     // tambien podemos usar un filtrado de la lista
     val filtrados = lista.filter { numero -> numero > 80 }
     println(filtrados.joinToString())
+
+
+    println("parte la lista en dos listas")
+    val lista2 = listOf(1,2,3,4,5,6,7,8,9)
+    val listaDoble = lista2.partition {
+        it <5
+    }
+
+    val menor5 = listaDoble.first
+    val mayor5 = listaDoble.second
+
+    println("lista menor de 5: ${menor5.toString()}")
+    println("lista mayor de 5: $mayor5")
+
+    // EN LAS LISTA SE PUEDEN ENCADENAR ACCIONES
+    println("ENCADENANDO ACCIONES")
+    val lista3 = lista.filterNot {
+        it == 5
+    }.sortedDescending().take(3)
+
+    println(lista3.joinToString())
 }

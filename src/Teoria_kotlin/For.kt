@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     for ((indice,valor) in intArray.withIndex()) println( " En la posicion $indice: $valor")
 
     // PUEDO GUARDAR EL INDEX Y EL VALUE EN UNA SOLA VARIABLE
-    for (a in intArray.withIndex()) println(a)
+    for (a in intArray.withIndex()) println("el valor en una sola variable: $a")
     for (a in intArray.withIndex()) print(a.index)
     println()
     for (a in intArray.withIndex()) print(a.value)

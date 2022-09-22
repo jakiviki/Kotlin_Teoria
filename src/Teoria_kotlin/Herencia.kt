@@ -6,6 +6,23 @@ fun main() {
     var coche = Coche("coche",false,"polo")
     coche.arrancar()
 
+    val volswagen = CocheData("polo")
+    val mercedes = CocheData("polo")
+    println("EQUALS DE LOS DATACOCHES: ${volswagen.equals(mercedes)}")
+    println("Son iguales los datacoches: ${volswagen == mercedes}")
+
+    println("has los volwagen: ${volswagen.hashCode()}")
+    println("has mercedes: ${ mercedes.hashCode()}")
+
+    val seat = Coche("coche",false,"polo")
+
+    println("Son los objetos coche iguales: ${coche == seat}")
+    println("has de coche: ${coche.hashCode()}")
+    println("has de seat: ${ seat.hashCode()}")
+
+    println("equal de coche: ${coche.equals(seat)}")
+
+
     println("OBJETO FURGONETA +++++++++++++")
     var furgoneta = Furgoneta("furgoneta",true,"zafiro")
     furgoneta.arrancar()
@@ -29,7 +46,7 @@ open class vehiculo(
     var tipo: String = ""
 ) {
     open fun arrancar(){
-        println("Arrancando en Teoria_kotlin.vehiculo: ")
+        println("Arrancando vehiculo: ")
     }
 }
 
@@ -61,9 +78,8 @@ class Furgoneta : vehiculo {
         this.modelo = modelo
     }
 
-    // esta funcion no llama Teoria_kotlin.a la funcion padre
+    // esta funcion no llama a la funcion padre
     override fun arrancar(){
-        super.arrancar()
         println("arrancando la furgoneta sin llamar al arrancar del padre")
     }
 }
@@ -104,4 +120,7 @@ class Carreras(motor: String,tipo:String,encendido:Boolean,modelo:String) : Coch
     }
 
 }
+
+
+data class CocheData(val name: String)
 

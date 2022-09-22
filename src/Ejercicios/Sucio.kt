@@ -4,39 +4,35 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer
 import javax.swing.JOptionPane
 
 fun main() {
-    arraysList()
 
+    val cancion = Song("javier","la reina mora")
+    val cancion1 = Song("sonia","la reina mora")
+    val cancion2 = Song("sandra","la reina mora")
+    cancion.play()
+    cancion.stop()
+    cancion1.play()
+    cancion2.play()
 }
 
-fun arraysList(){
-    var elementos: Int = JOptionPane.showInputDialog("INTRODUCE UN TAMAÑO JAVI").toInt()
-    var listaEstatica: Array<Int?> = arrayOfNulls<Int>(elementos)
-
-    for (i in 0 until elementos){
-        listaEstatica[i] = JOptionPane.showInputDialog("Introduce un valor").toInt()
+class Song(
+    val tittle: String,
+    val artista: String
+){
+    private val mayusculas = tittle.uppercase()
+    init {
+        println("OBJETO EN INIT y mirando el valor de mysculas: $mayusculas")
     }
-
-    println("ESTA ES TU LISTA JAVI")
-    listaEstatica.forEach {
-        println(it)
+    fun play(){
+        println("LA CANCIÓN ESTA SONANDO")
+        println("Artista: $artista")
+        println("TITULO: $mayusculas")
     }
-
-    var arrayLlistDinamica = ArrayList<Int>()
-    var respuesta:Char
-    do {
-        arrayLlistDinamica.add(JOptionPane.showInputDialog("Añade valores Teoria_kotlin.a la lista dinamica").toInt())
-        respuesta = JOptionPane.showInputDialog("Quieres continuar: S/N")[0]
-
-    }while (respuesta == 's' || respuesta == 'S')
-
-    println("ESTA ES TU LISTA JAVI")
-    arrayLlistDinamica.forEach {
-        println(it)
+    fun stop(){
+        println("LA CANCIÓN ESTA EN STOP")
+        println("Artista: $artista")
+        println("TITULO: $mayusculas")
     }
-
-
 
 }
-
 
 

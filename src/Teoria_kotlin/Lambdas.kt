@@ -5,6 +5,10 @@ fun main() {
     var lambda: (String)-> Int = { it -> it.length} // puedes usar el it o darle un nombre Teoria_kotlin.a it
     miPrintln()
 
+    var joder: (String)-> Unit = { println(it.plus(1)) }
+
+    joder("javi")
+
     // para imvocar a la lambda tienes que poner los ()
     // SI NO DEVUELVE NADA NO SIRVE DE NADA UN PRINTLN
     println("Sin parentesis"+lambda)
@@ -38,7 +42,9 @@ fun main() {
     val lambdaNull: (()->Unit)? = null
     val lambdaNull2: (()->Unit)? = {}
 
-   lambdaNull2 ?: { println("no nulla")}
+    if (lambdaNull2 != null) {
+        lambdaNull2() ?: { println("no nulla")}
+    }
 
 
 

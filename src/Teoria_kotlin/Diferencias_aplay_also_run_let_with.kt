@@ -13,6 +13,11 @@ fun main() {
 
     println("APLAY Y ALSO...")
 
+    obPersonJavi.nombre = "sin apply"
+    obPersonJavi.dameNombre()
+
+
+
     obPersonJavi.apply {
         nombre = "Javierillo"
     }.dameNombre()
@@ -27,34 +32,45 @@ fun main() {
     println("LET...")
     // LET NO LO TENGO MUY CLARO PERO PARA LOS NULOS VA BIEN
     // NO LO IMPRIME POR SER NULO
+    // LA CLAVE ES LA ? SIN ELLA ENTRA EN EL NULL
+    // CON ELLA PREGUNTA SI ES NULL Y SI ES TRUE NO ENTRA
 
     var javi: String? = null
 
+    // AL TENER LA ? PREGUNTA Y SI ES NULL NO ENTRA AL CODIGO
     println( "la variable javi es: ${javi ?: "nula y lo demuestro con el elvis"}")
     javi?.let {
         println("no entra por ser null ")
         println(it)
     }.run { println("ahora  entra en el run") }
 
-    // IMPRIME CUANDO NO ES NULO
-
-    javi = "javivi"
-    javi?.let {
-        println("longitud del javi: " +it.length)
+    // AL NO TENER ? ENTRA SIN PREGUNTAR Y MANEJA EL NULL
+    javi.let {
+        println("longitud del javi: " +it?.length)
         println(it)
+        print("puedo imprimir todo lo que quiera no solo la ultima linea")
     }
 
     // PUEDES ITERAR POR EL OBJETO IGUAL QUE ALSO Y APLAY PERO CON EL IT
-    print("************** iterando por objeto no Null **************")
+    println("***** iterando por objeto  Null *****")
+    println("sin ? en oscar")
     obPersonOscar.let {
-        it.nombre = "Oscar la mejor"
-        println("cambio el nombre del objeto con let")
+        it.nombre = " Oscarin"
         println(it.nombre)
     }
 
-    //NO EJECUTA EL CODIGO AL SER EL OBJ NULO
+    println("con ? en null")
+    //NO EJECUTA EL CODIGO AL SER EL OBJ NULO Y USAR LA ?
     personaNull?.let {
         it.nombre = "nombre null"
+        println(it.nombre)
+    }
+
+    println("sin ? en null")
+    //SIN ? ENTRA AL CODIGO Y EJECUTA
+    personaNull.let {
+        it?.nombre = "AÑADO NOMBRE A UNA PERSONA NULL"
+        println(it?.nombre)
     }
 
     println("----------- HASTA AQUI SON LOS TRES MUY PARECIDO ------------------")

@@ -11,6 +11,8 @@ fun main() {
 
     var hijo = javi?.length  // ? si es nulo accede Teoria_kotlin.a el length
     var hija = desconocido?.length ?: "Irene"   // elvis comprueba la lenght y si no devuelve irene
+    var hijas = desconocido?.length
+    println("el valor de hijas: $hijas")
     println(hijo)
     println(hija)
 

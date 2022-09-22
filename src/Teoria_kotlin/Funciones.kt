@@ -21,6 +21,10 @@ fun main(args: Array<String>) {
     val objInfix= Infix()
     objInfix funcinonSinPunto("Imprimiendo sin el punto de la funcion")
 
+    val javi= "javi"
+    javi.removePrefix("j")
+    println(javi)
+
 
 }
 
