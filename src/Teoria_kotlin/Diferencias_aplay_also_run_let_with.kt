@@ -24,6 +24,7 @@ fun main() {
 
     obPersonJavi.also {
         it.apellido = "fernandez"
+        it.dameNombre()
         println("repito el nombre para comprobar que puedo acceder a los metodos dentro del scot ${it.dameNombre()}")
     }.dameNombre()
 
@@ -38,7 +39,7 @@ fun main() {
     var javi: String? = null
 
     // AL TENER LA ? PREGUNTA Y SI ES NULL NO ENTRA AL CODIGO
-    println( "la variable javi es: ${javi ?: "nula y lo demuestro con el elvis"}")
+    println( "la variable javi es: $javi  nula y lo demuestro con el elvis")
     javi?.let {
         println("no entra por ser null ")
         println(it)
@@ -88,6 +89,7 @@ fun main() {
         dameNombre()
         nombre
     }
+    println("imprimo con un print el objeto nuevo: ${personaNueva}")
     println("imprimo con un print el objeto nuevo: ${personaNueva.hashCode()}")
     println("imprimo con un print el objeto viejo: ${obPersonJavi.hashCode()}")
 

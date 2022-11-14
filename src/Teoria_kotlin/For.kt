@@ -9,21 +9,35 @@ fun main(args: Array<String>) {
 
     for (numero in intArray) println(numero) // imprime el valor
     for (i in stringArray) println(i) // imprime el valor
+    println()
+
     for (i in 0 .. stringArray.size) println(i) // consigo un indice usando el tamaño
+    println()
+
     for (numero: Int in 10..15) println(numero)
-    for (numero: Int in 10..15 step 2) println(numero)
+    println()
+
+    for (numero: Int in 0..15 step 2) println(numero)
+    println()
 
     // con until no cuenta el ultimo valor (util para variables desconocidas)
     for (numero: Int in 10 until 15 ) println(numero)
+    println()
 
     // para Teoria_kotlin.imprimir en decremento es obligatorio el down
     for (numero: Int in 20 downTo 1 ) println(numero)
+    println()
+
     for ((indice,valor) in intArray.withIndex()) println( " En la posicion $indice: $valor")
+    println()
 
     // PUEDO GUARDAR EL INDEX Y EL VALUE EN UNA SOLA VARIABLE
     for (a in intArray.withIndex()) println("el valor en una sola variable: $a")
+    println()
+
     for (a in intArray.withIndex()) print(a.index)
     println()
+
     for (a in intArray.withIndex()) print(a.value)
 
 

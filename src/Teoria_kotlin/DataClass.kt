@@ -9,9 +9,12 @@ fun main() {
     // varias formas de llamar al objeto dataclass
     val objetoHumano: Humano = Humano("Blanco","javier","hombre")
     val objetoHumano2: Humano = Humano(nombre = "javier",sexo = "macho",raza = "negro")
+
     val objetoHumano3 = Humano("blanco",sexo = "mujer",nombre = "susana")
+    val objetoHumano4 = Humano("blanco",sexo = "mujer",nombre = "susana")
 
     val humanito = Humanito("humana","nombre class")
+    val humanito2 = Humanito("humana","nombre class 2")
 
 
     // una vez crado el objeto la val no se puede cambiar
@@ -20,14 +23,22 @@ fun main() {
     objetoHumano.nombre = "paco"
     // objetoHumano.raza = "perro"   .error no compilaria
 
-    // COMPARANDO OBJETOS PARA VER QUE NO LO HACE CON LAS DIRECONES DE MEMORIA
-    println("SON IGUALES LOS OBJETOS 1 Y 2: ${objetoHumano == objetoHumano2}")
+    // COMPARANDO EL HAS DE DOS CLASES NORMALES
+    println("SON IGUALES LOS HAS DE DOS CLASES?: ${humanito == humanito2}")
 
-    println("comparando el metodo print de las class")
+    // COMPROBANDO DOS DATACLAS CON CONTENIDO IGUAL
+    println("SON IGUALES LAS DATACLAS CON CONTENIDO IGUAL:? ${objetoHumano3 == objetoHumano4}")
+
+    // COMPARANDO OBJETOS PARA VER QUE NO LO HACE CON LAS DIRECONES DE MEMORIA
+    println("SON IGUALES LOS OBJETOS 1 Y 2 CON CONTENIDO DISTINTO?: ${objetoHumano == objetoHumano2}")
+
+    println()
+    println("comparando el metodo print de las class.......")
     println(objetoHumano)
     println(objetoHumano2)
     println(objetoHumano3)
-    println("comparando el metodo print de las dataclass")
+    println()
+    println("comparando el metodo print de las dataclass.......")
     println(humanito)
     println(humanito.nombre)
 }

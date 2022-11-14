@@ -8,19 +8,29 @@ fun main() {
 
     var nula: String? = null
     nula?.let {
-        it -> println(it)
-    }
-
-    println( nula ?: "no es nula" )
-
-    nula = "Teoria_kotlin.getJavi"
-    nula?.let {
         println(it)
     }
 
+    nula.let {
+        println("ENTRANDO CON LET EN UN $it")
+    }
+
+    println( nula ?: "Escribiendo a mano por ser null" )
+
+
     val personaLet1 = PersonaLet("javi","el mio",45)
+    val obNull: PersonaLet? = null
+
     personaLet1.let {
         it.edad -=3
+    }
+
+    obNull.let {
+        if (it != null) {
+            println("EL VALOR DEL OBJETO ES: ${it.nombre}")
+        }
+
+        println(it?.nombre)
     }
 
     // COMPRUEBO UNA FUNCIN IGUALADA A UN PARAMETRO

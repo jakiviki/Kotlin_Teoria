@@ -38,6 +38,7 @@ fun main() {
         println(block(numero2))
     }
     sumaLambda2(44) { it + it }
+    sumaLambda2(44) { it - it }
 
     // cuidado con el Unit aqui no imprime nada por ser un Unit por eso no pinta nada  /////////////////////////
     imprimir("cuidado con Unit aqui no devuelve nada y por lo tanto no imprime ningun valor")

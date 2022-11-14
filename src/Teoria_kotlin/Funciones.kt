@@ -58,6 +58,8 @@ private fun prefSufi() {
 private fun stringBuilder(text: String): StringBuilder {
     println(" //// METOD PARA INSERTAR ////////")
     val name = StringBuilder(text)
+    var name2 = text
+   // name2.insert()  no es posible al no ser de la clase StringBuilder
     println("valor: $text")
     name.insert(0, " ")
     name.insert(name.length, " ")
