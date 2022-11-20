@@ -1,16 +1,34 @@
 package Teoria_kotlin
 
+fun main() {
+
+  val eje2 = Ejem2("javier","fernandez")
+  val eje3 = Ejem2("javier","fernandez")
+    println(eje2.toString())
+
+    val javi = Humano("humano","javier","varon")
+    val javi2 = Humano("humano","javier","vaon")
+    println(javi == javi2)
+
+    val owner = Ower("noe")
+    println(owner)
+
+}
+
 // se usa la palabra constructor
 // se puede omitir
 // las variables no se puede inicializar para eso se usa el init
-class Ower()
+data class Ower(val name: String)
 
-class ejem0 constructor( name: String)
+class ejem0 constructor(private val  name: String)
 
 class ejem1(name: String){
     var name = name
         get() = field
-        set(value) {field = value}
+        set(value) {
+            value.lowercase().length.toString()
+            field = value
+        }
 
     init {
 
@@ -20,7 +38,7 @@ class ejem1(name: String){
 class Ejem2(name: String){
 
     var name = name
-    var apellido= ""
+    private var apellido= ""
 
     constructor(name: String,apellido:String): this(name){
         this.apellido = apellido
@@ -35,13 +53,4 @@ class Per(var name:String){
     constructor(name: String,apellido:String): this(name){
         this.apellido = apellido
     }
-}
-
-fun main() {
-    val perro = Per("Teoria_kotlin.getJavi")
-    val perro2 = Per("oscar","gonzalez")
-    val perrete = Per("Javiercillo")
-
-    println(perro.apellido)
-    println(perro2.apellido)
 }
