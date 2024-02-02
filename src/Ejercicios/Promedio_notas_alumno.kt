@@ -1,9 +1,6 @@
 package Ejercicios
 
-import Teoria_kotlin.soloUnaLinea
-import com.sun.xml.internal.fastinfoset.util.StringArray
 import javax.swing.JOptionPane
-import kotlin.properties.Delegates
 
 // calculamos el promedio de 4 notas de un alumno
 var notas = DoubleArray(4)

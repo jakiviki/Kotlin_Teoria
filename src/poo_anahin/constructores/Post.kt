@@ -15,8 +15,8 @@ class Post(
     private var content: String = ""
     private var category: String = ""
 
-    constructor(name: String, author: String, date: LocalDateTime, content: String, category: String) : this(
-        name,
+    constructor(title: String, author: String, date: LocalDateTime, content: String, category: String) : this(
+        title,
         author,
         date
     ) {
